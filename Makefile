@@ -35,6 +35,10 @@ test: ##@ Test the code with pytest
 	@echo "Testing code..."
 	@uv run python -m pytest --cov --cov-config=pyproject.toml --cov-report=html
 
+.PHONY: tox
+tox: ##@ Run tox to test the code with all supported Python versions
+	@uv run tox
+
 .PHONY: build
 build: ##@ Build wheel file
 	@make clean-build

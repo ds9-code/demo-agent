@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import Any, ClassVar
 
 import yaml
+from pydantic import Field
 from pydantic.fields import FieldInfo
 from pydantic_settings import BaseSettings, PydanticBaseSettingsSource, SettingsConfigDict
 
@@ -50,8 +51,8 @@ class Config(BaseSettings):
         env_nested_delimiter="__",
     )
 
-    logging: LoggingConfig
-    hyperparameters: HyperparametersConfig
+    logging: LoggingConfig = Field(default_factory=LoggingConfig)
+    hyperparameters: HyperparametersConfig = Field(default_factory=HyperparametersConfig)
 
     @classmethod
     def settings_customise_sources(

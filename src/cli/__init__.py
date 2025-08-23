@@ -8,6 +8,7 @@ from typing import Any
 
 import click
 import rich.logging
+from rich import pretty, traceback
 
 from .cli import cli
 
@@ -43,14 +44,14 @@ class RichHandler(rich.logging.RichHandler):
 
         # Enable warning capture and pretty printing
         captureWarnings(True)
-        rich.pretty.install()
+        pretty.install()
 
         # Suppress tracebacks for click
         traceback_install_kwargs = {"suppress": [click, str(Path(sys.executable).parent)]}
         self._configure_traceback_kwargs(kwargs, traceback_install_kwargs)
 
         if self.rich_tracebacks:
-            rich.traceback.install(**traceback_install_kwargs)
+            traceback.install(**traceback_install_kwargs)
 
     def _configure_traceback_kwargs(self, input_kwargs: dict, traceback_kwargs: dict) -> None:
         """Process traceback-related configuration from input kwargs.

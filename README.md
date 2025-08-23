@@ -94,6 +94,7 @@ Usage: make <command>
     install              Create the virtual environment and install the pre-commit hooks
     check                Run code quality tools.
     test                 Test the code with pytest
+    tox                  Run tox to test the code with all supported Python versions
     build                Build wheel file
     clean-build          Clean build artifacts
     docs-test            Test if documentation can be built without warnings or errors
