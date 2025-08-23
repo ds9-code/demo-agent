@@ -213,3 +213,7 @@ __marimo__/
 # Jupyter notebooks
 notebooks/**
 !notebooks/quickstart.ipynb
+
+# Data
+!data/**/
+!data/.gitkeep

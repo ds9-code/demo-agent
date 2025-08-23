@@ -99,6 +99,7 @@ Usage: make <command>
     docs-test            Test if documentation can be built without warnings or errors
     docs                 Build and serve the documentation
     clean                Clean up the project
+    jupyterlab           Spin up JupyterLab
 ```
 
 ## Support

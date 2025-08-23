@@ -33,7 +33,7 @@ check: ##@ Run code quality tools.
 .PHONY: test
 test: ##@ Test the code with pytest
 	@echo "Testing code..."
-	@uv run python -m pytest --cov --cov-config=pyproject.toml --cov-report=xml
+	@uv run python -m pytest --cov --cov-config=pyproject.toml --cov-report=html
 
 .PHONY: build
 build: ##@ Build wheel file
@@ -74,3 +74,7 @@ clean: ##@ Clean up the project
 	@rm -f .coverage*
 	@rm -rf target
 	@rm -rf .tox
+
+.PHONY: jupyterlab
+jupyterlab: ##@ Spin up JupyterLab
+	@uv run jupyter lab

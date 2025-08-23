@@ -1,7 +1,7 @@
 [project]
 name = "template"
 version = "0.0.1"
-description = "This is a template repository for Python projects that use uv for their dependency management."
+description = "A modern, production-ready template for Python-based research projects in the Zitnik Lab."
 authors = [{ name = "Zitnik Lab", email = "marinka@hms.harvard.edu" }]
 readme = "README.md"
 keywords = ['python']
@@ -16,6 +16,14 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "jupyter>=1.1.1",
+    "lab>=8.4",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.10.1",
+    "rich>=14.1.0",
+    "typer>=0.16.1",
 ]
 
 [project.urls]

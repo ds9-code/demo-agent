@@ -1,5 +1,5 @@
-from template.foo import foo
+from src.main import main
 
 
 def test_foo():
-    assert foo("foo") == "foo"
+    assert main("foo") == "foo"
