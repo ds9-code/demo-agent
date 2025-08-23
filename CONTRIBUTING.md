@@ -100,7 +100,7 @@ make test
    This will run the tests across different versions of Python:
 
 ```bash
-tox
+uv run tox
 ```
 
 This requires you to have multiple versions of python installed.

@@ -1,4 +1,4 @@
-# Zitnik Lab Research Repository Template
+# Zitnik Lab Repository Template
 
 [![Release](https://img.shields.io/github/v/release/mims-harvard/template)](https://img.shields.io/github/v/release/mims-harvard/template)
 [![Build status](https://img.shields.io/github/actions/workflow/status/mims-harvard/template/main.yml?branch=main)](https://github.com/mims-harvard/template/actions/workflows/main.yml?query=branch%3Amain)
