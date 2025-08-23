@@ -2,7 +2,6 @@
 
 [![Release](https://img.shields.io/github/v/release/mims-harvard/template)](https://img.shields.io/github/v/release/mims-harvard/template)
 [![Build status](https://img.shields.io/github/actions/workflow/status/mims-harvard/template/main.yml?branch=main)](https://github.com/mims-harvard/template/actions/workflows/main.yml?query=branch%3Amain)
-[![codecov](https://codecov.io/gh/mims-harvard/template/branch/main/graph/badge.svg)](https://codecov.io/gh/mims-harvard/template)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/mims-harvard/template)](https://img.shields.io/github/commit-activity/m/mims-harvard/template)
 [![License](https://img.shields.io/github/license/mims-harvard/template)](https://img.shields.io/github/license/mims-harvard/template)
 
@@ -46,4 +45,3 @@ The CI/CD pipeline will be triggered when you open a pull request, merge to main
 
 To finalize the set-up for publishing to PyPI, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/publishing/#set-up-for-pypi).
 For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/mkdocs/#enabling-the-documentation-on-github).
-To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
