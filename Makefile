@@ -16,34 +16,34 @@ help: ##@ List available commands with their descriptions
 	}'
 
 .PHONY: install
-install: ##@ Install the virtual environment and install the pre-commit hooks
-	@echo "🚀 Creating virtual environment using uv"
+install: ##@ Create the virtual environment and install the pre-commit hooks
+	@echo "Creating virtual environment using uv..."
 	@uv sync
 	@uv run pre-commit install
 
 .PHONY: check
 check: ##@ Run code quality tools.
-	@echo "🚀 Checking lock file consistency with 'pyproject.toml'"
+	@echo "Checking lock file consistency with 'pyproject.toml'..."
 	@uv lock --locked
-	@echo "🚀 Linting code: Running pre-commit"
+	@echo "Linting code..."
 	@uv run pre-commit run -a
-	@echo "🚀 Static type checking: Running ty"
+	@echo "Static type checking..."
 	@uv run ty check
 
 .PHONY: test
 test: ##@ Test the code with pytest
-	@echo "🚀 Testing code: Running pytest"
+	@echo "Testing code..."
 	@uv run python -m pytest --cov --cov-config=pyproject.toml --cov-report=xml
 
 .PHONY: build
 build: ##@ Build wheel file
 	@make clean-build
-	@echo "🚀 Creating wheel file"
+	@echo "Creating wheel file..."
 	@uvx --from build pyproject-build --installer uv
 
 .PHONY: clean-build
 clean-build: ##@ Clean build artifacts
-	@echo "🚀 Removing build artifacts"
+	@echo "Removing build artifacts..."
 	@uv run python -c "import shutil; import os; shutil.rmtree('dist') if os.path.exists('dist') else None"
 
 .PHONY: docs-test
@@ -53,3 +53,24 @@ docs-test: ##@ Test if documentation can be built without warnings or errors
 .PHONY: docs
 docs: ##@ Build and serve the documentation
 	@uv run mkdocs serve
+
+.PHONY: clean
+clean: ##@ Clean up the project
+	@echo "Cleaning up the project..."
+	@rm -rf `find . -name __pycache__`
+	@rm -f `find . -type f -name '*.py[co]'`
+	@rm -f `find . -type f -name '*~'`
+	@rm -f `find . -type f -name '.*~'`
+	@rm -f `find . -type f -name '*.log'`
+	@rm -rf `find . -type d -name '.ipynb_checkpoints'`
+	@rm -rf `find . -type d -name '*.egg-info'`
+	@rm -rf .cache
+	@rm -rf dist
+	@rm -rf .mypy_cache
+	@rm -rf .venv
+	@rm -rf .pytest_cache
+	@rm -rf .ruff_cache
+	@rm -rf htmlcov
+	@rm -f .coverage*
+	@rm -rf target
+	@rm -rf .tox

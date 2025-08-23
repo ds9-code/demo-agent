@@ -209,3 +209,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Jupyter notebooks
+notebooks/**
+!notebooks/quickstart.ipynb
