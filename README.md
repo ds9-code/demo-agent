@@ -64,17 +64,27 @@ Optional:
 
 You're now ready to start development! The CI/CD pipeline will automatically run when you open pull requests or push to main.
 
+### Setup for Deployment and Documentation
+
+1. **Enable documentation deployment:**
+   To set up automatic documentation deployment:
+   - Navigate to `Settings > Actions > General` in your repository
+   - Under `Workflow permissions`, select `Read and write permissions`
+
+2. **Create your first release:**
+   - Go to your repository on GitHub and click `Releases` on the right sidebar
+   - Select `Draft a new release` (or visit `https://github.com/mims-harvard/<repository-name>/releases/new`)
+   - Give your release a title and add a new tag in the format `v1.0.0`
+   - Press `Publish release`
+
+3. **Deploy documentation to Lab website**
+   - Navigate to `Settings > Code and Automation > Pages`
+   - You should see: `Your site is ready to be published at https://zitniklab.hms.harvard.edu//<repository-name>/`
+   - Under `Source`, select the branch `gh-pages`
+
 ## Development Commands
 
-The template includes convenient Makefile commands for common development tasks:
-
-- `make install` - Set up development environment
-- `make check` - Run linting and formatting checks
-- `make test` - Run test suite
-- `make docs` - Build documentation
-- `make clean` - Clean up build artifacts
-
-You can see all available commands running `make help`:
+The template includes convenient Makefile commands for common development tasks. You can see all available commands running `make help`:
 
 ```console
 $ make
