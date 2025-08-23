@@ -12,13 +12,13 @@ A modern, production-ready template for Python-based research projects in the Zi
 
 ## Highlights
 
-- 🚀 **Fast setup** with automated environment configuration and dependency management
-- 🛠️ **Pre-configured tooling** including linting, formatting, and testing with pre-commit hooks
-- 📦 **Modern Python packaging** using `uv` for lightning-fast dependency resolution
-- 🔄 **CI/CD ready** with GitHub Actions for automated testing and deployment
-- 📝 **Documentation ready** with automatic documentation generation setup
-- 🧪 **Testing framework** pre-configured with pytest and coverage reporting
-- 🔧 **Development tools** including Makefile commands for common tasks
+- 🚀 **Fast setup** with automated environment configuration and dependency management.
+- 🛠️ **Pre-configured tooling** including linting, formatting, and testing with [pre-commit hooks](https://pre-commit.com/).
+- 📦 **Modern Python packaging** using [uv](https://docs.astral.sh/uv/) for lightning-fast dependency resolution.
+- 🔄 **CI/CD ready** with [GitHub Actions](https://github.com/features/actions) for automated testing and deployment.
+- 📝 **Documentation ready** with automatic documentation generation with [MkDocs](https://squidfunk.github.io/mkdocs-material/).
+- 🧪 **Testing framework** pre-configured with [pytest](https://docs.pytest.org/en/stable/) and coverage reporting.
+- 🔧 **Development tools** including [Makefile](Makefile) commands for common tasks.
 
 This template provides everything you need to start a new research project with modern Python best practices built-in.
 
@@ -76,7 +76,7 @@ The template includes convenient Makefile commands for common development tasks:
 
 You can see all available commands running `make help`:
 
-```bash
+```console
 $ make
 
 Usage: make <command>
