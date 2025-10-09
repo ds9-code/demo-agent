@@ -69,15 +69,8 @@ You're now ready to start development! The CI/CD pipeline will automatically run
 The Command Line Interface (CLI) already comes with all the configuration injected. You just simply need to run:
 
 ```bash
-```bash
 uv run cli --help
 ```
-```
-```
-```
-```
-```
-
 
 ### Setup for Deployment and Documentation
 
