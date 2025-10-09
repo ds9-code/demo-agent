@@ -10,8 +10,6 @@ import click
 import rich.logging
 from rich import pretty, traceback
 
-from .cli import cli
-
 
 class RichHandler(rich.logging.RichHandler):
     """Enhanced Rich logging handler with support for colored formatting and traceback customization.
