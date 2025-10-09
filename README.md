@@ -64,6 +64,21 @@ Optional:
 
 You're now ready to start development! The CI/CD pipeline will automatically run when you open pull requests or push to main.
 
+### Using the Command Line Interface
+
+The Command Line Interface (CLI) already comes with all the configuration injected. You just simply need to run:
+
+```bash
+```bash
+uv run cli --help
+```
+```
+```
+```
+```
+```
+
+
 ### Setup for Deployment and Documentation
 
 1. **Enable documentation deployment:**
