@@ -72,7 +72,6 @@ The Command Line Interface (CLI) already comes with all the configuration inject
 uv run cli --help
 ```
 
-
 ### Setup for Deployment and Documentation
 
 1. **Enable documentation deployment:**
