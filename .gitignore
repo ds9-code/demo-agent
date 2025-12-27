@@ -280,5 +280,5 @@ notebooks/**
 !notebooks/quickstart.ipynb
 
 # Data
-!data/**/
+data/**
 !data/.gitkeep
