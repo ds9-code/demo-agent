@@ -27,8 +27,8 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/marinkaz/template"
-Documentation = "https://marinkaz.github.io/template/"
+Repository = "https://github.com/mims-harvard/template"
+Documentation = "https://zitniklab.hms.harvard.edu/template"
 
 [project.scripts]
 cli = "src.cli.__main__:cli"
