@@ -72,6 +72,22 @@ The Command Line Interface (CLI) already comes with all the configuration inject
 uv run cli --help
 ```
 
+#### Agent orchestration demos
+
+This project includes agent orchestration examples (LangGraph, LangChain, custom async, pyautogen). Run them with:
+
+```bash
+uv run cli agent --input "Find a quick summary of LangGraph" --demo langgraph
+uv run cli agent --input "Tell me the current time" --demo langchain
+uv run cli agent --input "Give me 3 ideas for an agent demo" --demo custom
+uv run cli agent --input "Write a short plan" --demo pyautogen
+```
+
+- `--demo` / `-d`: `langgraph`, `langchain`, `custom`, or `pyautogen` (default: `langgraph`)
+- `--input` / `-i`: Your prompt (required)
+
+Without `OPENAI_API_KEY` or `TAVILY_API_KEY`, the demos use deterministic mock responses so they run offline. Set those env vars to use real LLM and web search.
+
 ### Setup for Deployment and Documentation
 
 1. **Enable documentation deployment:**
